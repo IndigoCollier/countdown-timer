@@ -8,8 +8,10 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+ 
   <div class="container">
-    <h1>Countdown Timer</h1>
+    <h1>Zodiac Countdown</h1>
+    <p id="zodSub">Pick your birthdate. Discover your fate.</p>
     <input type="datetime-local" id="datetime" />
     <button id="start">Start Countdown</button>
 
@@ -21,9 +23,34 @@
     </div>
     <div id="zodiacContainer" class="hidden">
       <img id="zodiacImage" src="/images/taurus.jpg" alt="Zodiac Sign" />
-      <h2 id="zodiacMessage"></h2>
+      <h2 id="zodiacMessage"></h2> 
       <p id="zodiacInfo"></p>
     </div>
+    </div>
+
+    <div id="optBtns" class="hidden">
+    <button id="moreInfo">Learn More</button>
+    <button id="reset">Reset Timer</button>
+    </div>
+  
+
+<div id="zodiacLayout">
+   <div id="zodiacSidebar" class="hidden"></div>
+</div>
+
+  <div id="zodPopupOverlay">
+  <div id="zodPopupBox">
+    <span id="zodCloseBtn" style="float: right;cursor: pointer;width: 5px;height:5px; color: goldenrod;">&times;</span>
+    <div id="zodPopupContent">Loading...</div>
   </div>
+  </div>
+
+  <audio id="zodMusic" loop>
+  <source src="/zodMusic.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<div id="copyToast">Copied to clipboard!</div>
+  
+
 </body>
 </html>
